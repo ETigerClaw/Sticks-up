@@ -16,12 +16,23 @@ public class NpcMovement : MonoBehaviour
             // Move towards the current waypoint
             transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, moveSpeed * Time.deltaTime);
 
+
             // Check if the NPC has reached the current waypoint
             if (Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position) < 0.1f)
             {
                 // Move to the next waypoint
+
+             //Check if the NPC has reached the current waypoint
+            if (transform.position == waypoints[currentWaypointIndex].position)
+            {
+                //Move to the next waypoint
+
                 currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
             }
         }
     }
+
 }
+
+}
+
