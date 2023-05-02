@@ -24,14 +24,14 @@ public class ChopStickController : MonoBehaviour
     void Update()
     {
         // Movements 1 & 2
-        if (Input.GetKey(KeyCode.UpArrow) && pinchCounter > -pinchLimit)
+        if (Input.GetMouseButton(0) && pinchCounter > -pinchLimit)
         {
             pinchCounter -= 1;
             controlChopstick.transform.Rotate(Vector3.right * rotationSpeedFactor * Time.deltaTime);
             baseChopstick.transform.Rotate(Vector3.left * rotationSpeedFactor * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow) && pinchCounter < pinchLimit)
+        if (Input.GetMouseButton(1) && pinchCounter < pinchLimit)
         {
             pinchCounter += 1;
             controlChopstick.transform.Rotate(Vector3.left * rotationSpeedFactor * Time.deltaTime);
@@ -40,26 +40,26 @@ public class ChopStickController : MonoBehaviour
 
 
         // Movements 3 & 4
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.E))
             hand.transform.Rotate(Vector3.forward * rotationSpeedFactor * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.Q))
             hand.transform.Rotate(Vector3.back * rotationSpeedFactor * Time.deltaTime);
 
 
         // Movements 5 & 6
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.D))
             hand.transform.Rotate(Vector3.up * rotationSpeedFactor * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.A))
             hand.transform.Rotate(Vector3.down * rotationSpeedFactor * Time.deltaTime);
 
 
         // Movements 7 & 9
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.S))
             hand.transform.Rotate(Vector3.right * rotationSpeedFactor * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.W))
             hand.transform.Rotate(Vector3.left * rotationSpeedFactor * Time.deltaTime);
 
 

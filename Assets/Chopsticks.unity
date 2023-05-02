@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571337, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361753958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.21, y: -1.2, z: -19.79}
+  m_LocalPosition: {x: -5.6, y: 0.8, z: -19.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -419,7 +419,8 @@ MonoBehaviour:
   hand: {fileID: 429454227}
   baseChopstick: {fileID: 415615147}
   controlChopstick: {fileID: 1418948180}
-  movementSpeedFactor: 5
+  movementSpeedFactor: 10
+  rotationSpeedFactor: 50
 --- !u!1 &1067359845
 GameObject:
   m_ObjectHideFlags: 0
