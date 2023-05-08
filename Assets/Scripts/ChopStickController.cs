@@ -50,26 +50,9 @@ public class ChopStickController : MonoBehaviour
             hand.transform.Rotate(Vector3.back * rotationSpeedFactor * Time.deltaTime);
 
 
-        // Movements 5 & 6 (Turn Right or Left)
-       // if (Input.GetKey(KeyCode.D))
-           // hand.transform.Rotate(Vector3.up * rotationSpeedFactor * Time.deltaTime);
-
-        // if (Input.GetKey(KeyCode.A))
-           // hand.transform.Rotate(Vector3.down * rotationSpeedFactor * Time.deltaTime);
-
-
-        // Movements 7 & 9 (Turn down or up)
-       // if (Input.GetKey(KeyCode.S))
-          //  hand.transform.Rotate(Vector3.right * rotationSpeedFactor * Time.deltaTime);
-
-       // if (Input.GetKey(KeyCode.W))
-           // hand.transform.Rotate(Vector3.left * rotationSpeedFactor * Time.deltaTime);
-
-        // This should simplify the currently ignored movements above (will remove in future version)
-
         float h = anglingSpeedFactorX * Input.GetAxis("Mouse X");
         float v = anglingSpeedFactorY * Input.GetAxis("Mouse Y");
-        if (Input.GetKey(KeyCode.P))
+        if (Input.GetKey(KeyCode.P) || Input.GetMouseButton(2))
             transform.Rotate(v, h, 0);
 
         // Movements 10 & 11 (Move backwards or forwards)
