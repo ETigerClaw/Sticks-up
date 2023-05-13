@@ -17,6 +17,8 @@ public class ChopStickController : MonoBehaviour
     private static int pinchLimit = 80;
     private int pinchCounter = 0;
 
+    public bool test = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,10 +59,26 @@ public class ChopStickController : MonoBehaviour
 
         // Movements 10 & 11 (Move backwards or forwards)
         if (Input.GetKey(KeyCode.F))
-            hand.transform.position -= transform.forward * Time.deltaTime * movementSpeedFactor;
+            hand.transform.position -= (transform.forward * Time.deltaTime * movementSpeedFactor);
 
         if (Input.GetKey(KeyCode.R))
             hand.transform.position += transform.forward * Time.deltaTime * movementSpeedFactor;
 
+        if (Input.GetKey(KeyCode.Z))
+        {
+            test = true;
+        }
+
     }
+
+    //void FixedUpdate()
+    //{
+    //    if (test)
+    //    {
+    //        Rigidbody m_Rigidbody = baseChopstick.GetComponent<Rigidbody>();
+    //        Vector3 movement = new Vector3();
+    //        movement = baseChopstick.transform.position + new Vector3(0, (0.1f * Time.deltaTime * movementSpeedFactor), 0);
+    //        m_Rigidbody.MovePosition(movement);
+    //    }
+    //}
 }
