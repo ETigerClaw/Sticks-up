@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17278391, g: 0.21591307, b: 0.29785103, a: 1}
+  m_IndirectSpecularColor: {r: 0.17278342, g: 0.21591246, b: 0.29784998, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4579,7 +4579,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 631020055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea9749b180ddcc34f8b72b6f4a4b29b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6590ab1a8b6554b0e829dff71a91a54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 16728656}
@@ -15558,7 +15558,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1674397811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea9749b180ddcc34f8b72b6f4a4b29b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6590ab1a8b6554b0e829dff71a91a54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 16728656}

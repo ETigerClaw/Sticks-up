@@ -23,14 +23,14 @@ public class ChopStickController : MonoBehaviour
     void FixedUpdate()
     {
         // Movements 1 & 2 (Pinching)
-        if (Input.GetMouseButton(0) && pinchCounter > -pinchLimit)
+        if (Input.GetMouseButton(1) && pinchCounter > -pinchLimit)
         {
             pinchCounter -= 1;
             controlChopstick.transform.Rotate(Vector3.right * rotationSpeedFactor * Time.deltaTime);
             baseChopstick.transform.Rotate(Vector3.left * rotationSpeedFactor * Time.deltaTime);
         }
 
-        if (Input.GetMouseButton(1) && pinchCounter < pinchLimit)
+        if (Input.GetMouseButton(0) && pinchCounter < pinchLimit)
         {
             pinchCounter += 1;
             controlChopstick.transform.Rotate(Vector3.left * rotationSpeedFactor * Time.deltaTime);
