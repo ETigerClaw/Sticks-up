@@ -14,19 +14,13 @@ public class ChopStickController : MonoBehaviour
     public float anglingSpeedFactorX = 10f;
     public float anglingSpeedFactorY = -10f;
 
-    private static int pinchLimit = 80;
+    private static int pinchLimit = 15;
     private int pinchCounter = 0;
 
     public bool test = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Movements 1 & 2 (Pinching)
         if (Input.GetMouseButton(0) && pinchCounter > -pinchLimit)
@@ -71,14 +65,4 @@ public class ChopStickController : MonoBehaviour
 
     }
 
-    //void FixedUpdate()
-    //{
-    //    if (test)
-    //    {
-    //        Rigidbody m_Rigidbody = baseChopstick.GetComponent<Rigidbody>();
-    //        Vector3 movement = new Vector3();
-    //        movement = baseChopstick.transform.position + new Vector3(0, (0.1f * Time.deltaTime * movementSpeedFactor), 0);
-    //        m_Rigidbody.MovePosition(movement);
-    //    }
-    //}
 }

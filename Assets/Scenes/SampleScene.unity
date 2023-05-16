@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17278342, g: 0.21591246, b: 0.29784998, a: 1}
+  m_IndirectSpecularColor: {r: 0.17278391, g: 0.21591307, b: 0.29785103, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -220,7 +220,6 @@ GameObject:
   m_Component:
   - component: {fileID: 16728657}
   - component: {fileID: 16728658}
-  - component: {fileID: 16728659}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -236,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16728656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6056, y: -0.30229998, z: 1.6700001}
+  m_LocalPosition: {x: 0.6056, y: -0.168, z: 1.6700001}
   m_LocalScale: {x: 0.06197167, y: 0.06197167, z: 0.06197167}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -267,19 +266,6 @@ MonoBehaviour:
   anglingSpeedFactorX: 10
   anglingSpeedFactorY: -10
   test: 0
---- !u!114 &16728659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16728656}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6590ab1a8b6554b0e829dff71a91a54a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hand: {fileID: 16728656}
 --- !u!1 &56057381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3817,7 +3803,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28786
+  m_Name: pb_Mesh28410
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4538,7 +4524,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a4a8e0350b063dc4bab7d1c7d070f019,
         type: 3}
       propertyPath: m_TagString
-      value: Chopstick
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4a8e0350b063dc4bab7d1c7d070f019, type: 3}
@@ -4593,7 +4579,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 631020055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6590ab1a8b6554b0e829dff71a91a54a, type: 3}
+  m_Script: {fileID: 11500000, guid: ea9749b180ddcc34f8b72b6f4a4b29b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 16728656}
@@ -10451,7 +10437,6 @@ GameObject:
   - component: {fileID: 1171802473}
   - component: {fileID: 1171802472}
   - component: {fileID: 1171802471}
-  - component: {fileID: 1171802470}
   - component: {fileID: 1171802475}
   m_Layer: 0
   m_Name: Cube (29)
@@ -10460,18 +10445,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1171802470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171802469}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aadffb87d59b04f5b8932a9e54355423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1171802471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11533,7 +11506,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 517368536}
 --- !u!33 &1255867877
@@ -12787,7 +12760,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a4a8e0350b063dc4bab7d1c7d070f019,
         type: 3}
       propertyPath: m_TagString
-      value: Chopstick
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4a8e0350b063dc4bab7d1c7d070f019, type: 3}
@@ -13014,18 +12987,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.7, z: 0.2}
   m_Center: {x: 0, y: 0.05, z: 1.7}
---- !u!114 &1396724232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1396724219}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c10662bfe5b214bed8528a111d8bfbc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1423202965
 GameObject:
   m_ObjectHideFlags: 0
@@ -14942,7 +14903,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28554
+  m_Name: pb_Mesh28132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15597,7 +15558,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1674397811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6590ab1a8b6554b0e829dff71a91a54a, type: 3}
+  m_Script: {fileID: 11500000, guid: ea9749b180ddcc34f8b72b6f4a4b29b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 16728656}
@@ -17093,6 +17054,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0b2d90a83c7373f488b5db8af89cd7b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2d90a83c7373f488b5db8af89cd7b5, type: 3}

@@ -5,9 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - Chopstick
   - Interactable
-  - inHand
   layers:
   - Default
   - TransparentFX
