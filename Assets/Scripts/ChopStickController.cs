@@ -17,12 +17,10 @@ public class ChopStickController : MonoBehaviour
     private static int pinchLimit = 15;
     private int pinchCounter = 0;
 
-    public bool test = false;
-
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Movements 1 & 2 (Pinching)
+        // Movements for pinching
         if (Input.GetMouseButton(1) && pinchCounter > -pinchLimit)
         {
             pinchCounter -= 1;
@@ -38,31 +36,25 @@ public class ChopStickController : MonoBehaviour
         }
 
 
-        // Movements 3 & 4 (Rotation)
-        if (Input.GetKey(KeyCode.E))
+        // Movements for rotation
+        if (Input.GetKey(KeyCode.E) || Input.GetMouseButton(4))
             hand.transform.Rotate(Vector3.forward * rotationSpeedFactor * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) || Input.GetMouseButton(3))
             hand.transform.Rotate(Vector3.back * rotationSpeedFactor * Time.deltaTime);
 
-
+        // Movement for changing direction the chopsticks are facing
         float h = anglingSpeedFactorX * Input.GetAxis("Mouse X");
         float v = anglingSpeedFactorY * Input.GetAxis("Mouse Y");
         if (Input.GetKey(KeyCode.P) || Input.GetMouseButton(2))
             transform.Rotate(v, h, 0);
 
-        // Movements 10 & 11 (Move backwards or forwards)
-        if (Input.GetKey(KeyCode.F))
+        // Movements backwards or forwards. NOTE: the scrollwheel option is slower and less smooth than ideal, but this is a low priority
+        if (Input.GetKey(KeyCode.F) || Input.GetAxis("Mouse ScrollWheel") < 0f)
             hand.transform.position -= (transform.forward * Time.deltaTime * movementSpeedFactor);
 
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKey(KeyCode.R) || Input.GetAxis("Mouse ScrollWheel") > 0f)
             hand.transform.position += transform.forward * Time.deltaTime * movementSpeedFactor;
-
-        if (Input.GetKey(KeyCode.Z))
-        {
-            test = true;
-        }
-
     }
 
 }
