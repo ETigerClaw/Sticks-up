@@ -12,6 +12,16 @@ public class PauseMenu : MonoBehaviour
     CursorLockMode desiredMode;
 
     // Update is called once per frame
+
+    void Start()
+    {
+        PauseUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        Cursor.visible = false;
+        desiredMode = CursorLockMode.Confined;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
