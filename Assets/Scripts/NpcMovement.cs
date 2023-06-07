@@ -2,37 +2,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NpcMovement : MonoBehaviour
+public class NPCMovement : MonoBehaviour
 {
-    public Transform[] waypoints;
-    public float moveSpeed = 2f;
+    public float moveSpeed = 3f;
+    public float rotationSpeed = 100f;
+    public float detectionRadius = 2f;
 
-    private int currentWaypointIndex = 0;
+    private bool isMoving = false;
+    private Vector3 targetPosition;
 
-    void Update()
+    private void Start()
     {
-        if (waypoints.Length > 0)
+        MoveToRandomPosition();
+    }
+
+    private void Update()
+    {
+        if (isMoving)
         {
-            // Move towards the current waypoint
-            transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, moveSpeed * Time.deltaTime);
+            Quaternion targetRotation = Quaternion.LookRotation(targetPosition - transform.position);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
+            Vector3 newPosition = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-            // Check if the NPC has reached the current waypoint
-            if (Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position) < 0.1f)
+            if (!HasCollision(newPosition))
             {
-                // Move to the next waypoint
-
-             //Check if the NPC has reached the current waypoint
-            if (transform.position == waypoints[currentWaypointIndex].position)
+                transform.position = newPosition;
+            }
+            else
             {
-                //Move to the next waypoint
+                MoveToRandomPosition();
+            }
 
-                currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+            if (transform.position == targetPosition)
+            {
+                isMoving = false;
+                MoveToRandomPosition();
             }
         }
     }
 
-}
+    private void MoveToRandomPosition()
+    {
+        float range = 1000f;
+        targetPosition = new Vector3(Random.Range(-range, range), 0f, Random.Range(-range, range));
 
-}
+        isMoving = true;
+    }
 
+    private bool HasCollision(Vector3 position)
+    {
+        Collider[] colliders = Physics.OverlapSphere(position, detectionRadius);
+        foreach (Collider collider in colliders)
+        {
+            if (!collider.isTrigger && collider != GetComponent<Collider>())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+}
