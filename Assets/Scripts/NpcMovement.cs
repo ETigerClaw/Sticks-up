@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCMovement : MonoBehaviour
+public class NpcMovement : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float rotationSpeed = 100f;
-    public float detectionRadius = 2f;
+    public float detectionRadius = 0.0002f;
 
     private bool isMoving = false;
     private Vector3 targetPosition;
