@@ -6,7 +6,7 @@ public class NpcMovement : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public float rotationSpeed = 100f;
-    public float detectionRadius = 0.0002f;
+    public float detectionRadius = 2f;
 
     private bool isMoving = false;
     private Vector3 targetPosition;
