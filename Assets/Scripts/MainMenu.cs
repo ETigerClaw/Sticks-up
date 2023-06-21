@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     public void Play()
     {
-        SceneManager.LoadScene("Office");
+        SceneManager.LoadScene("OfficeRedo");
     }
 
     // Update is called once per frame
